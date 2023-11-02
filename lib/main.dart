@@ -3,6 +3,11 @@ import 'package:email_app/screens/hopscotch.dart';
 import 'package:email_app/screens/noice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+import 'screens/html_render_screens/happilo_screen.dart';
+import 'screens/html_render_screens/hopscotch_screen.dart';
+import 'screens/html_render_screens/noise_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,14 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   navigate(index) {
     if (index == 0) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Happilo()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const HappiloScreen()));
     } else if (index == 1) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const HopScotch()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const HopscotchScreen()));
     } else {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Noice()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const NoiseScreen()));
     }
   }
 
